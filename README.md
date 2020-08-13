@@ -6,13 +6,13 @@ A small package used with Laravel to store transactions to be exported into Quic
 The qb_ledger_accruals table was used to reconcile exports from the application that made it into QuickBooks and allow the accrual batches to be exported again at a later time if needed.
 
 ## Set DOCNUM Format
-This packaged incremented a specific number format used for the Entry No. You can set it here:
+This package incremented a specific number format used for the Entry No. You can set it here:
 ```php
 LedgerAccrual::DOC_NUM_FORMAT
 ```
 
 ## Standarize Memo Format
-This packaged uses a set format for the memo filled in by sprintf(). You can set it here:
+This package uses a set format for the memo filled in by sprintf(). You can set it here:
 ```php
 LedgerAccrual::MEMO_FORMAT
 ```
@@ -96,7 +96,8 @@ LedgerAccrual::MEMO_FORMAT
     $batch = QuickBooks::getLedgerBatch($batch_num);
     
     /*
-    * Note you can create separate transaction with your data. Group them by date, or account, or some other criteria.
+    * Note you can create separate transactions with your data. 
+    * Group them by date, or account, or some other criteria.
     * The export can contain multiple transactions.
     * This example puts the whole batch in one transaction.
     */
